@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Student {
+    int rollNo;
+    char name[30];
+};
+
+int main() {
+    struct Student s[50];
+    int count, i;
+
+    printf("Enter number of records: ");
+    scanf("%d", &count);
+
+    for (i = 0; i < count; i++) {
+        printf("\nEnter details of student %d\n", i + 1);
+
+        printf("Roll No: ");
+        scanf("%d", &s[i].rollNo);
+
+        printf("Name: ");
+        scanf(" %[^\n]", s[i].name);
+    }
+
+    printf("\nTotal number of records stored: %d\n", count);
+
+    return 0;
+}
