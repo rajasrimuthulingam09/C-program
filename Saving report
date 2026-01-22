@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int months, i;
+    float income, expenses, savings;
+
+    printf("Enter number of months: ");
+    scanf("%d", &months);
+
+    for(i = 1; i <= months; i++) {
+        printf("\nMonth %d\n", i);
+        printf("Enter income: ");
+        scanf("%f", &income);
+        printf("Enter expenses: ");
+        scanf("%f", &expenses);
+
+        savings = income - expenses;
+        printf("Savings for month %d = %.2f\n", i, savings);
+    }
+
+    return 0;
+}
