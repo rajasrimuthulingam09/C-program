@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Product {
+    int pid;
+    char name[50];
+    float price;
+};
+
+int main() {
+    struct Product p;
+
+    printf("Enter product ID: ");
+    scanf("%d", &p.pid);
+
+    printf("Enter product name: ");
+    scanf("%s", p.name);
+
+    printf("Enter price: ");
+    scanf("%f", &p.price);
+
+    printf("\nProduct Details:");
+    printf("\nID: %d", p.pid);
+    printf("\nName: %s", p.name);
+    printf("\nPrice: %.2f", p.price);
+
+    return 0;
+}
